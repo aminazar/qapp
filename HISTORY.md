@@ -6,13 +6,20 @@ Version Control System
 ----------------------
 30 May 2016: I chose to use Git with [a github public repository](https://github.com/aminazar/qapp/).
 
-Technical details:  
-   > cd quran_app/
-   > git init
-   > git add README.md
-   > git commit -m "first commit"
-   > git remote add origin https://github.com/aminazar/qapp.git
-   > git push -u origin master
+Technical details:
+
+`> cd quran_app/
+   
+> git init
+   
+> git add README.md
+   
+> git commit -m "first commit"
+
+> git remote add origin https://github.com/aminazar/qapp.git
+   
+> git push -u origin master
+`
 
 ### `.gitignore`
 Added webstorm and npm modules - plus an extension used in Mac. Learnt from James Shore.
