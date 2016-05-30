@@ -25,3 +25,13 @@ Added webstorm and npm modules - plus an extension used in Mac. Learnt from Jame
 
 ### Licence
 I used Creative Commons zero as license - for now.
+
+Automated build
+---------------
+Installing Jake:
+
+`> npm install jake --ignore-scripts --save-dev`
+
+* `ignore-scripts`: avoid installing binaries
+* `save-dev`: to add jake as dependency in `package.json`
+
