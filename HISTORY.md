@@ -8,17 +8,17 @@ Version Control System
 
 Technical details:
 
-    `> cd quran_app/`
+`> cd quran_app/`
    
-    `> git init`
+`> git init`
    
-    `> git add README.md`
+`> git add README.md`
    
-    `> git commit -m "first commit"`
+`> git commit -m "first commit"`
 
-    `> git remote add origin https://github.com/aminazar/qapp.git`
+`> git remote add origin https://github.com/aminazar/qapp.git`
    
-    `> git push -u origin master`
+`> git push -u origin master`
 
 ### `.gitignore`
 Added webstorm and npm modules - plus an extension used in Mac. Learnt from James Shore.
