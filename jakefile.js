@@ -1,11 +1,14 @@
-/* globals desc:false, task:false, complete:false, fail:false */
+/* globals jake: false, directory: false, desc:false, task:false, complete:false, fail:false */
 (function(){
    "use strict";
     var semver = require("semver");
     var lint   = require("simplebuild-jshint");
+    var shell = require("shelljs");
+
+    var DIST_DIR = "generated/dist";
 
     desc("Default build");
-    task("default", [ "version", "lint" ], function() {
+    task("default", [ "version", "lint", "build" ], function() {
         console.log("\n\nBUILD OK");
     });
 
@@ -58,4 +61,19 @@
         }, complete, fail);
     }, { async: true });
 
+    desc("Build distribution directory");
+    task("build", [ DIST_DIR ], function() {
+        console.log("Building distribution directory: .");
+
+        shell.rm("-rf", DIST_DIR + "/*");
+        shell.cp("src/content/*", DIST_DIR);
+
+        jake.exec(
+            "node node_modules/browserify/bin/cmd.js -r ./src/javascript/app.js:tabs -o " + DIST_DIR + "/bundle.js",
+            { interactive: true },
+            complete);
+    }, { async: true });
+
+    // Dependency on this directory actually exists
+    directory(DIST_DIR);
 }());
