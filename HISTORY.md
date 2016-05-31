@@ -42,6 +42,7 @@ Installing semver to check node version:
 Adding jakefile.js for automated build. NodeJS version was added to package.json and semver was used to compare it with actual version.
 Adding `JSHint` into jake by installing JSHint and `simplebuild-jshint`
 Adding `Browserify` and `shelljs` - to make automated build
-Making distribution and source directories and use `browserify` to build the app from modules in source 
+Making distribution and source directories and use `browserify` to build the app from modules in source
+Adding local server using `http-server` - adding it to `jake run` command
 
 

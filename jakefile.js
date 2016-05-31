@@ -69,11 +69,22 @@
         shell.cp("src/content/*", DIST_DIR);
 
         jake.exec(
-            "node node_modules/browserify/bin/cmd.js -r ./src/javascript/app.js:tabs -o " + DIST_DIR + "/bundle.js",
+            "node node_modules/browserify/bin/cmd.js -r ./src/javascript/app.js:app -o " + DIST_DIR + "/bundle.js",
             { interactive: true },
             complete);
     }, { async: true });
 
     // Dependency on this directory actually exists
     directory(DIST_DIR);
+
+    desc("Erase all generated files");
+    task("clean", function() {
+        console.log("Erasing generated files: .");
+        shell.rm("-rf", "generated");
+    });
+
+    desc("Run a localhost server");
+    task("run", [ "build" ], function() {
+        jake.exec("node node_modules/http-server/bin/http-server " + DIST_DIR, { interactive: true }, complete);
+    }, { async: true });
 }());
