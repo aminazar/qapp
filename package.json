@@ -1,0 +1,31 @@
+{
+  "name": "qapp",
+  "version": "1.0.0",
+  "description": "Quran Together App",
+  "main": "app.js",
+  "engines":{
+    "node": "4.3.2"
+  },
+  "dependencies": {
+    "jake": "^8.0.12"
+  },
+  "devDependencies": {
+    "semver": "^5.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aminazar/qapp.git"
+  },
+  "keywords": [
+    "Quran"
+  ],
+  "author": "Amin Azarbadegan",
+  "license": "SEE LICENSE IN LISENSE.md",
+  "bugs": {
+    "url": "https://github.com/aminazar/qapp/issues"
+  },
+  "homepage": "https://github.com/aminazar/qapp#readme"
+}

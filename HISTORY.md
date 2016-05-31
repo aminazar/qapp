@@ -35,3 +35,7 @@ Installing Jake:
 * `ignore-scripts`: avoid installing binaries
 * `save-dev`: to add jake as dependency in `package.json`
 
+Installing semver to check node version:
+
+`> npm instal semver --ignore-scripts --save-dev`
+
