@@ -38,4 +38,9 @@ Installing Jake:
 Installing semver to check node version:
 
 `> npm instal semver --ignore-scripts --save-dev`
+31 May 16:
+Adding jakefile.js for automated build. NodeJS version was added to package.json and semver was used to compare it with actual version.
+Adding JSHint into jake by installing JSHint and simplebuild-jshint
+
+
 
